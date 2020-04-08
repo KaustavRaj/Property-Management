@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Custom 404 Page">
+	<link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap">
+	<title>404 Not Found</title>
+
+	<style>
+		.header-body {
+			background: #1abc9c;
+			font-size: 60px;
+			text-align: center;
+			color: #ffffe6;
+			padding: 40px;
+			font-family: 'Spicy Rice';
+		}
+
+		.main-body {
+			padding: 20px;
+		}
+
+		body {
+			background-color: #ffffe6;
+			margin: 0;
+			font-family: "Lucida Console", Monaco, monospace;
+		}
+
+		.url {
+			padding-left: 20px;
+			color: #ff4d4d;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-body"> 404 Not Found 
+		</div>
+	</header>
+
+	<main>
+		<div class="main-body">
+			<p>The requested url id was not found. You can only visit the following links : </p>
+
+			<p class="url"> https://localhost:{port}/agents/info </p>
+			<p class="url"> https://localhost:{port}/agents/{agent-id} </p>
+			<p class="url"> https://localhost:{port}/agents/count </p>
+
+			<p> "port" is the port-number you chose to run server.js file, and "agent-id" can be from 1 to 10. </p>
+		</div>
+	</main>
+</body>
+</html>
