@@ -1,28 +1,11 @@
 const express = require('express');
-// const html = require('html')
-// const http = require('http');
 const path = require('path');
 const mysql = require('mysql');
 const bodyParser = require('body-parser')
 const mysqlConnection = require("./connection");
 const Router = express.Router();
 
-// const { JSDOM } = require("jsdom");
-// const myJSDom = new JSDOM (html);
-// const $ = require('jquery')(myJSDom.window);
-
-// const app = express();
-
-// app.use(bodyParser.urlencoded({extended : false}));
-// app.use(bodyParser.json());
-// app.set('json spaces', 4);
-
 parser = bodyParser.urlencoded({extended : false});
-
-
-// app.get('/', (req, res)=>{
-// 	res.sendFile(path.join(__dirname, 'agents.html'))
-// });
 
 Router.post('/', parser, (req, res)=>{
 
@@ -31,7 +14,7 @@ Router.post('/', parser, (req, res)=>{
 	let option = req.body.option;
 	let city = req.body.city;
 
-	if (option == "sell") {
+	if (option == "buy") {
 
 		if (city == "") {
 			mysqlConnection.query(
